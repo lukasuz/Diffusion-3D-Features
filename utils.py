@@ -9,7 +9,7 @@ from tqdm import tqdm
 from PIL import Image
 from pytorch3d.io import load_obj
 import matplotlib.pyplot as plt
-import meshplot as mp
+# import meshplot as mp
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import colorsys
@@ -24,12 +24,12 @@ def generate_colors(n):
     return colors
 
 
-def plot_mesh(myMesh,cmap=None):
-    mp.plot(myMesh.vert, myMesh.face,c=cmap)
+# def plot_mesh(myMesh,cmap=None):
+#     mp.plot(myMesh.vert, myMesh.face,c=cmap)
     
-def double_plot(myMesh1,myMesh2,cmap1=None,cmap2=None):
-    d = mp.subplot(myMesh1.vert, myMesh1.face, c=cmap1, s=[2, 2, 0])
-    mp.subplot(myMesh2.vert, myMesh2.face, c=cmap2, s=[2, 2, 1], data=d)
+# def double_plot(myMesh1,myMesh2,cmap1=None,cmap2=None):
+#     d = mp.subplot(myMesh1.vert, myMesh1.face, c=cmap1, s=[2, 2, 0])
+#     mp.subplot(myMesh2.vert, myMesh2.face, c=cmap2, s=[2, 2, 1], data=d)
 
 def get_colors(vertices):
     min_coord,max_coord = np.min(vertices,axis=0,keepdims=True),np.max(vertices,axis=0,keepdims=True)
